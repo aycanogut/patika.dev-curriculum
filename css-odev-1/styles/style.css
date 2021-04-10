@@ -1,18 +1,231 @@
-/* base css */
+/* * base css */
 
 body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-h1 {}
+main {
+  display: flex;
+}
 
-h2 {}
+h1 {
+  font-size: 36px;
+  margin: 100px 0 40px 0;
+}
 
-ul {}
+h2 {
+  font-size: 28px;
+  margin: 40px 0;
+}
 
-li {}
+h4 {
+  font-size: 22px;
+  margin: 12px 0 4px 0;
+}
 
-a {}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-p {}
+
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+
+}
+
+/* * common components */
+
+/* nav */
+
+nav ul {
+  display: flex;
+  padding: 20px;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+nav img {
+  width: 120px;
+  height: 120px;
+
+}
+
+nav ul li a {
+  font-size: 20px;
+  line-height: 115px;
+  transition: all 0.3s;
+
+}
+
+nav ul li a:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+
+/* header */
+header {
+  margin: 80px auto 40px auto;
+  text-align: center;
+}
+
+header img {
+  width: 60%;
+  filter: drop-shadow(0 2px 12px #000);
+  transition: all 0.3s;
+
+}
+
+header img:hover {
+  filter: drop-shadow(0 12px 20px #000);
+  transition: all 0.3s;
+  transform: scale(1.1);
+}
+
+header p {
+  padding: 0 10% 40px 10%;
+}
+
+header a {
+  padding: 12px 24px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 50px;
+  transition: all 0.5s;
+
+}
+
+header a:hover {
+  opacity: 80%;
+  transition: all 0.5s;
+
+}
+
+
+/* footer */
+footer nav img {
+  width: 34%;
+}
+
+footer nav li a {
+  line-height: 150px;
+}
+
+footer nav div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer div {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+}
+
+footer div img {
+  width: 18px;
+  height: 18px;
+}
+
+footer div p {
+  margin: 0;
+}
+
+
+
+/* comics */
+.comics {
+  text-align: center;
+  padding: 50px 5%;
+}
+
+.comics .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px 50px;
+
+}
+
+.comics .comics-item {
+  padding: 28px 0;
+  transition: all .4s;
+
+}
+
+.comics .comics-item:hover {
+  transform: scale(1.02);
+  transition: all .4s;
+  opacity: .9;
+}
+
+
+/* news */
+.news {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 3% 50px 0;
+}
+
+.news h2 {
+  text-align: center;
+}
+
+.news article a {
+  display: flex;
+  flex-direction: row;
+  padding: 0 20px 20px 0;
+  transition: all .4s ease;
+
+}
+
+.news article a:hover {
+  transition: all .2s ease-in;
+  color: rgb(92, 92, 92);
+}
+
+.news article div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding-left: 24px;
+}
+
+.news article img {
+  padding-top: 24px;
+  width: 120px;
+  height: 120px;
+}
+
+.news-item h2,
+.news-item p {
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+
+  .news {
+    padding: 0 5%;
+  }
+}
