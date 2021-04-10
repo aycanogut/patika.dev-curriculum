@@ -2,13 +2,16 @@
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+
 }
 
 main {
   display: flex;
+  justify-content: center;
 }
 
 h1 {
@@ -61,14 +64,14 @@ nav ul li {
 }
 
 nav img {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 110px;
 
 }
 
 nav ul li a {
   font-size: 20px;
-  line-height: 115px;
+  line-height: 90px;
   transition: all 0.3s;
 
 }
@@ -118,12 +121,9 @@ header a:hover {
 
 
 /* footer */
-footer nav img {
-  width: 34%;
-}
 
 footer nav li a {
-  line-height: 150px;
+  line-height: 100px;
 }
 
 footer nav div {
@@ -162,7 +162,13 @@ footer div p {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 50px 50px;
+}
 
+.comics .wrapper-store {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px 50px;
 }
 
 .comics .comics-item {
@@ -220,12 +226,146 @@ footer div p {
   font-size: 1rem;
 }
 
+/* address */
+
+.wrapper-address {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 24px;
+  padding: 50px;
+}
+
+.address p {
+  padding: 12px 0;
+}
+
+
+.map {
+
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+input {
+  border-radius: 8px;
+}
+
+span {
+  padding: 100px;
+}
+
+form label,
+form input {
+  padding: 0 12px;
+}
+
+form input:focus,
+textarea:focus {
+  outline: none;
+
+}
+
+
+
+/* responsive */
+
+
 @media (max-width: 1200px) {
+
+  /* base */
   main {
     flex-direction: column;
   }
 
+
+  /* news */
+
   .news {
     padding: 0 5%;
+  }
+
+  /* comics */
+
+  .comics .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .comics .wrapper-store {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  /* address */
+  .wrapper-address {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  /* form */
+  .form {
+    margin: 120px 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* nav */
+  nav img {
+    width: 100px;
+    height: 79px;
+    padding-top: 10px;
+
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  /* footer */
+
+  footer div p {
+    font-size: 14px;
+  }
+
+  footer div img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+
+
+  /* nav */
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: auto;
+  }
+
+  /* comics */
+  .comics .wrapper-store {
+    grid-template-columns: 1fr;
   }
 }
