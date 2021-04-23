@@ -1,0 +1,43 @@
+/* base */
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  text-transform: uppercase;
+}
+
+/* card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.nes-kirby {
+  margin-top: 20px;
+}
+
+.nes-text {
+  padding-top: 42px;
+  font-size: 24px;
+}
+
+/* buttons */
+
+.buttons {
+  padding-top: 8%;
+}
+
+.nes-btn {
+  margin: 20px;
+}

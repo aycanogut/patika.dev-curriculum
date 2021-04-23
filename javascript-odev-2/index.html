@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- nes.css -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <!-- user css -->
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <section>
+    <article class="card nes-container with-title is-centered">
+      <section class="message -left">
+        <div class="nes-balloon from-left is-light">
+          <p>click the buttons</p>
+        </div>
+      </section>
+      <i class="nes-kirby"></i>
+      <span class="nes-text" id="counter"></span>
+      <section class="buttons">
+        <button type="button" class="nes-btn is-primary" id="up">upper</button>
+        <button type="button" class="nes-btn is-error" id="down">downer</button>
+      </section>
+    </article>
+  </section>
+
+  <script src="./js/counter.js"></script>
+</body>
+
+</html>
