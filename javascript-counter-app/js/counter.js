@@ -10,7 +10,6 @@ let counter = localStorage.getItem("counter") ? Number(localStorage.getItem("cou
 upButtonD.addEventListener('click', clickEvent);
 downButtonD.addEventListener('click', clickEvent);
 
-
 // counter function
 function clickEvent() {
   if (this.id == "up") {
