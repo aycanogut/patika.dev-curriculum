@@ -77,3 +77,15 @@ const menu = [{
 
 let container = document.querySelector('.section-center');
 let btnContainer = document.querySelector('.btn-container');
+
+
+// menu kategorileri 
+
+let categoryState = menu.reduce((state, item) => {
+    if (state.includes(item.category) == null) {
+      state.push(item.category)
+    }
+    return values;
+  },
+  ['All'] // category varsayilan durumu
+)
