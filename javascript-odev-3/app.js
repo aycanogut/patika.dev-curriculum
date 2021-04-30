@@ -71,3 +71,9 @@ const menu = [{
     desc: `Red bean paste dessert, serving with honey.`,
   },
 ];
+
+
+// main-section ve btn-section DOM tanimlamalari
+
+let container = document.querySelector('.section-center');
+let btnContainer = document.querySelector('.btn-container');
