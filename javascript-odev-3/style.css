@@ -35,8 +35,14 @@ h2 {
   width: 30%;
   height: 175px;
   object-fit: cover;
-  border: 0.25rem solid black;
+  border: 0.2rem solid black;
   border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.photo:hover {
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 10px 20px rgba(61, 65, 84, .5);
 }
 
 .menu-items {

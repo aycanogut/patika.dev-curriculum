@@ -72,29 +72,29 @@ const menu = [{
   },
 ];
 
-
-// main-section ve btn-section DOM tanimlamalari
-
-let container = document.querySelector('.section-center');
-let btnContainer = document.querySelector('.btn-container');
+const menuContainer = document.querySelector('.section-center')
+const menuBtns = document.querySelectorAll('.btn');
+const foodItems = document.querySelectorAll('.menu-items');
 
 
-let categories = () => {
-  let buttons = categoryState.map((category) => {
-    (`<button class='btn btn-outline-dark btn-item' data-id=${category}>${category}</button>`);
-  }).join('');
-}
+// menu-body and menu-items declaration
+const menuWhole = (foodItems) => {
+  let menuBody = foodItems.map((value) => {
+    return `<article class="menu-items col-lg-6 col-sm-12">
+              <img src="${value.img}" alt="${value.title}" class="photo">
+              <div class="menu-info">
+                <header class="menu-title">
+                  <h4>${value.title}</h4>
+                  <h4 class="price">${value.price}</h4>
+                </header>
+                <p class="menu-text">
+                  ${value.desc}
+                </p>
+              </div>
+            </article>`;
+  });
+  menuBody = menuBody.join("");
+  menuContainer.innerHTML = menuBody;
+};
 
-
-
-// menu kategorileri 
-
-let categoryState = menu.reduce((state, item) => {
-    if (!state.includes(item.category)) {
-      // if (state.includes(item.category) == null) {
-      state.push(item.category)
-    }
-    return values;
-  },
-  ['All'] // category varsayilan durumu
-)
+menuWhole(menu);
