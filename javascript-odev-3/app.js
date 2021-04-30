@@ -73,11 +73,23 @@ const menu = [{
 ];
 
 const menuContainer = document.querySelector('.section-center')
-const menuBtns = document.querySelectorAll('.btn');
+const buttonContainer = document.querySelector('.btn-container');
 const foodItems = document.querySelectorAll('.menu-items');
+const createButton = document.createElement('button');
+const menuBtns = document.querySelectorAll('.btn');
 
 
-// menu-body and menu-items declaration
+
+// button declarations
+const buttonWhole = (buttonCategories) => {
+  let buttonBody = buttonCategories.map((value) => {
+    return `<button class="btn btn-outline-dark btn-item">${value.category}</button>`;
+  });
+  buttonBody = buttonBody.join("");
+  buttonContainer.innerHTML = buttonBody;
+}
+
+// menu-body and menu-items declarations
 const menuWhole = (foodItems) => {
   let menuBody = foodItems.map((value) => {
     return `<article class="menu-items col-lg-6 col-sm-12">
@@ -98,3 +110,4 @@ const menuWhole = (foodItems) => {
 };
 
 menuWhole(menu);
+buttonWhole(menu);
