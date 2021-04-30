@@ -79,10 +79,19 @@ let container = document.querySelector('.section-center');
 let btnContainer = document.querySelector('.btn-container');
 
 
+let categories = () => {
+  let buttons = categoryState.map((category) => {
+    (`<button class='btn btn-outline-dark btn-item' data-id=${category}>${category}</button>`);
+  }).join('');
+}
+
+
+
 // menu kategorileri 
 
 let categoryState = menu.reduce((state, item) => {
-    if (state.includes(item.category) == null) {
+    if (!state.includes(item.category)) {
+      // if (state.includes(item.category) == null) {
       state.push(item.category)
     }
     return values;
