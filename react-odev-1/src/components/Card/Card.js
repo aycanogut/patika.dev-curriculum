@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-import food from "../../assets/food.jpg"; // Tell webpack this JS file uses this image
+
 import heartOutline from "../../assets/heart-outline.png"; // Tell webpack this JS file uses this image
 import heartFill from "../../assets/heart-fill.png"; // Tell webpack this JS file uses this image
 
@@ -19,13 +19,13 @@ export default function Card(props) {
       <img className="card-image" src={props.item.image} alt="Logo" />
       <div className="card-text">{props.item.description}</div>
       <div className="card-like-bar">
-        {props.liked ? (
+        {props.isLiked ? (
           <img className="card-like-icon" src={heartFill} alt="Logo" />
         ) : (
           <img className="card-like-icon" src={heartOutline} alt="Logo" />
         )}
         <div className="like-text">
-          <b>{props.like}</b> kişi bu tarifi beğendi.
+          <b>{props.likeCount}</b> kişi bu tarifi beğendi.
         </div>
       </div>
     </div>
