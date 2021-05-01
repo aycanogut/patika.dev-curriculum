@@ -1,1 +1,1 @@
-recipe card project I did for Patika Front-End Challenge #1 / React section first assignment. Js / React.
+recipe-card project I did for Patika Front-End Challenge #1 / React section first assignment. 
