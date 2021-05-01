@@ -72,42 +72,47 @@ const menu = [{
   },
 ];
 
-const menuContainer = document.querySelector('.section-center')
-const buttonContainer = document.querySelector('.btn-container');
-const foodItems = document.querySelectorAll('.menu-items');
-const createButton = document.createElement('button');
-const menuBtns = document.querySelectorAll('.btn');
+
+// dom declarations
+const foodContainer = document.querySelector('.section-center')
+const buttonWrapper = document.querySelector('.btn-container');
+const btnItem = document.querySelectorAll('.btn');
+const btnAll = document.createElement("button");
+
+// all button
+btnAll.classList.add('btn', 'btn-outline-dark', 'btn-item')
+btnAll.innerText = 'All';
+buttonWrapper.append(btnAll);
+
+// category buttons
+menu.forEach(function (item) {
+  const btnCategory = document.createElement("button");
+  btnCategory.innerText = item.category;
+  buttonWrapper.appendChild(btnCategory).classList.add('btn', 'btn-outline-dark', 'btn-item');
+})
 
 
 
-// button declarations
-const buttonWhole = (buttonCategories) => {
-  let buttonBody = buttonCategories.map((value) => {
-    return `<button class="btn btn-outline-dark btn-item">${value.category}</button>`;
-  });
-  buttonBody = buttonBody.join("");
-  buttonContainer.innerHTML = buttonBody;
-}
+
 
 // menu-body and menu-items declarations
-const menuWhole = (foodItems) => {
-  let menuBody = foodItems.map((value) => {
+const restMenu = (items) => {
+  let menu = items.map((item) => {
     return `<article class="menu-items col-lg-6 col-sm-12">
-              <img src="${value.img}" alt="${value.title}" class="photo">
+              <img src="${item.img}" alt="${item.title}" class="photo">
               <div class="menu-info">
                 <header class="menu-title">
-                  <h4>${value.title}</h4>
-                  <h4 class="price">${value.price}</h4>
+                  <h4>${item.title}</h4>
+                  <h4 class="price">${item.price}</h4>
                 </header>
                 <p class="menu-text">
-                  ${value.desc}
+                  ${item.desc}
                 </p>
               </div>
             </article>`;
   });
-  menuBody = menuBody.join("");
-  menuContainer.innerHTML = menuBody;
+  menu = menu.join(" ");
+  foodContainer.innerHTML = menu;
 };
 
-menuWhole(menu);
-buttonWhole(menu);
+restMenu(menu);
