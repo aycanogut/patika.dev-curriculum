@@ -48,14 +48,12 @@ class App extends Component {
     });
   };
 
-  
   removeItem = (e) => {
     const remove = this.state.todos.filter(todo => todo.id != e.target.value);
     this.setState({todos: remove});
   };
 
-
-
+  
 
   render() {
     return (
@@ -77,5 +75,6 @@ class App extends Component {
     );
   }
 }
+
 
 export default App;
