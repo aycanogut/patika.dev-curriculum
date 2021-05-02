@@ -25,20 +25,21 @@ class CoinFlipper extends Component {
   render() {
     return (
       <div className="CoinFlipper">
-        <h1>Yazı mı Tura mı?</h1>
-        <Coin side={this.state.side} flipping={this.state.flipping} />
-        <button onClick={this.handleClick}>At!</button>
-        <p>
-          Toplam
-          <strong> 5 </strong>
-          atıştan
-          <strong> 3 </strong>ü tura
-          <strong> 2 </strong>
-          si yazı geldi.
-        </p>
-      </div>
+      <h1>Yazı mı Tura mı?</h1>
+      <Coin side={this.state.side} flipping={this.state.flipping} />
+      <button onClick={this.handleClick}>At!</button>
+      <p>
+        Toplam
+        <strong> {this.state.count} </strong>
+        atıştan
+        <strong> {this.state.heads} </strong>ü tura
+        <strong> {this.state.tails} </strong>
+        si yazı geldi.
+      </p>
+    </div>
     );
   }
 }
 
 export default CoinFlipper;
+
