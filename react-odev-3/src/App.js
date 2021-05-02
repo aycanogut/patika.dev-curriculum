@@ -48,6 +48,15 @@ class App extends Component {
     });
   };
 
+  
+  removeItem = (e) => {
+    const remove = this.state.todos.filter(todo => todo.id != e.target.value);
+    this.setState({todos: remove});
+  };
+
+
+
+
   render() {
     return (
       <div className="App">
@@ -61,7 +70,7 @@ class App extends Component {
         />
         {this.state.todos.length > 0 && (
           <div className="list">
-            <TodoList todos={this.state.todos} />
+            <TodoList todos={this.state.todos} removeItem={this.removeItem} />
           </div>
         )}
       </div>

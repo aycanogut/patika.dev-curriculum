@@ -3,10 +3,13 @@ import "./TodoItem.css";
 
 function Todo(props) {
   const { content, id } = props;
-  return <div onClick='{props.lineThrough}' class='d-flex align-items-center'>
-          <div>{content}</div>
-          <button onClick='{props.removeItem}' class='btn btn-danger ml-auto'>Sil</button>
-         </div>;
+
+  return (
+          <div className='d-flex align-items-center'>
+            <div>{content}</div>
+            <button value={id}  className='btn btn-danger ml-auto' onClick={props.removeItem}>Sil</button>
+          </div>
+          );
 }
 
 export default Todo;
