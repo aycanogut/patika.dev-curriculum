@@ -16,20 +16,9 @@ class CoinFlipper extends Component {
     };
   }
   handleClick = () => {
-    let randomNumber = Math.floor(Math.random() * 2);
-    // console.log(randomNumber)
-    this.state.count++
-
-    if (randomNumber === 1) {
-      this.setState({side : 'tura'});
-      this.state.heads++
-    }
-    else {
-      this.setState({side : 'yazi'});
-      this.state.tails++
-    }
-    
+    // "At!" butonuna tıkladığımızda paranın dönmesini istiyoruz, bu yüzden "flipping" durumunu "true" yapıyoruz.
     this.setState({ flipping: true });
+    // 1 saniye kadar dönmesi yeterli, bu yüzden 1 saniye sonra "flipping" durmunu tekrar "false" yapıyoruz.
     setTimeout(() => this.setState({ flipping: false }), 1000);
   };
 
@@ -41,10 +30,10 @@ class CoinFlipper extends Component {
         <button onClick={this.handleClick}>At!</button>
         <p>
           Toplam
-          <strong> {this.state.count} </strong>
+          <strong> 5 </strong>
           atıştan
-          <strong> {this.state.heads} </strong>ü tura
-          <strong> {this.state.tails} </strong>
+          <strong> 3 </strong>ü tura
+          <strong> 2 </strong>
           si yazı geldi.
         </p>
       </div>
