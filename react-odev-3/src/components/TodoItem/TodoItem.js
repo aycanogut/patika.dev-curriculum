@@ -8,7 +8,6 @@ function Todo(props) {
     e.target.className != 'line-through' ? e.target.className = 'line-through' : e.target.className = '';
   }
 
-
   return (
           <div className='d-flex align-items-center'>
             <div onClick={lineThrough}>{content}</div>
