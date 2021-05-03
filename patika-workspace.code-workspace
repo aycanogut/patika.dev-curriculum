@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "kodluyoruzilkrepo",
+			"path": "."
+		}
+	],
+	"settings": {
+		"terminal.integrated.cursorBlinking": true
+	}
+}
