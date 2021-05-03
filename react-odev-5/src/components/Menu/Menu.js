@@ -5,6 +5,7 @@ import "./Menu.css";
 const Menu = () => {
   const {
     /* Context'te bulunan ihtiyacımız olan state */
+    selectedIngredients,
     setSelectedIngredients,
     getCalculatedTotalPrice,
   } = useContext(HamburgerContext);

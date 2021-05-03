@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 
 export const HamburgerContext = createContext();
 
-const Hamburger = ({ children }) => {
+const HamburgerContextProdiver = ({ children }) => {
   const [selectedIngredients, setSelectedIngredients] = useState([]);
 
   const getCalculatedTotalPrice = () => {
@@ -17,6 +17,7 @@ const Hamburger = ({ children }) => {
     <HamburgerContext.Provider
       value={{
         selectedIngredients,
+        getCalculatedTotalPrice,
         getCalculatedTotalPrice,
         /* Component'lere gönderilmesi istenilen state değeri */
       }}

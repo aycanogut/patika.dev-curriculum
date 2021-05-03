@@ -72,33 +72,47 @@ const menu = [{
   },
 ];
 
-
-// dom declarations
 const foodContainer = document.querySelector('.section-center')
 const buttonWrapper = document.querySelector('.btn-container');
-const btnItem = document.querySelectorAll('.btn');
-const btnAll = document.createElement("button");
 
-// all button
-btnAll.classList.add('btn', 'btn-outline-dark', 'btn-item')
-btnAll.innerText = 'All';
-buttonWrapper.append(btnAll);
+const buttonCategories = menu.reduce(
+  (values, item) => {
+    if (!values.includes(item.category)) {
+      values.push(item.category);
+    }
+    return values;
+  },
+  ['All']
+)
 
-// category buttons
-menu.forEach(function (item) {
-  const btnCategory = document.createElement("button");
-  btnCategory.innerText = item.category;
-  buttonWrapper.appendChild(btnCategory).classList.add('btn', 'btn-outline-dark', 'btn-item');
-})
+const buttonFunc = () => {
+  const buttons = buttonCategories.map((category) => {
+    return `<button class="btn btn-outline-dark btn-item" data-id=${category}>${category}</button>`;
+  }).join("");
 
+  buttonWrapper.innerHTML = buttons;
+  const btnItems = document.querySelectorAll('.btn');
 
+  btnItems.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      const categories = event.currentTarget.dataset.id;
+      const menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category === categories) {
+          return menuItem;
+        }
+      });
+      if (categories === 'All') {
+        menuItem(menu);
+      } else {
+        menuItem(menuCategory);
+      }
+    });
+  });
+};
 
-
-
-// menu-body and menu-items declarations
-const restMenu = (items) => {
+const menuItem = (items) => {
   let menu = items.map((item) => {
-    return `<article class="menu-items col-lg-6 col-sm-12">
+    return `<article class="menu-items col-lg-6 col-sm-12" id=${item.id}>
               <img src="${item.img}" alt="${item.title}" class="photo">
               <div class="menu-info">
                 <header class="menu-title">
@@ -115,4 +129,5 @@ const restMenu = (items) => {
   foodContainer.innerHTML = menu;
 };
 
-restMenu(menu);
+buttonFunc()
+menuItem(menu);
