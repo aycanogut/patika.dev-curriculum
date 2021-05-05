@@ -28,7 +28,6 @@ class CoinFlipper extends Component {
       this.setState({side : 'tura'})
 
     }
-    console.log(randomNumber)
 
     this.setState({ flipping: true });
 
