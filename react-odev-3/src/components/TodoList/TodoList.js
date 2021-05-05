@@ -3,6 +3,7 @@ import TodoItem from "../TodoItem/TodoItem";
 import "./TodoList.css";
 
 function TodoList(props) {
+
   return (
     <div>
       <ul>
@@ -10,10 +11,7 @@ function TodoList(props) {
           return (
             <div>
               <li className="list-group-item d-flex justify-content-between align-items-center">
-              <TodoItem {...todo} key={todo.id} />
-              <button className='btn btn-danger'>
-              Sil
-            </button>
+              <TodoItem {...todo} key={todo.id} removeItem={props.removeItem}/>
             </li>
             </div>
           );
