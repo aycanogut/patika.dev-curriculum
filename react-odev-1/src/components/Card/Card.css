@@ -49,6 +49,7 @@
 	margin-bottom: 0;
 	margin-top: 0;
 }
+
 .card-date {
 	flex: 0.3;
 	font-size: small;
@@ -58,13 +59,16 @@
 .card-image {
 	border-radius: 10px;
 }
+
 .card-like-icon {
 	height: 25px;
 }
 
 .card-text {
-	width: 350px;
+	width: 400px;
 	font-size: medium;
+	margin: 12px auto;
+	text-align: justify;
 }
 
 .card-like-bar {
