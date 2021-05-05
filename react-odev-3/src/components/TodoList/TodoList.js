@@ -3,14 +3,13 @@ import TodoItem from "../TodoItem/TodoItem";
 import "./TodoList.css";
 
 function TodoList(props) {
-
   return (
     <div>
       <ul>
         {props.todos.map((todo) => {
           return (
             <li className="list-group-item">
-              <TodoItem {...todo} key={todo.id} removeItem={props.removeItem} />
+              <TodoItem {...todo} key={todo.id} />
             </li>
           );
         })}
@@ -20,4 +19,3 @@ function TodoList(props) {
 }
 
 export default TodoList;
-

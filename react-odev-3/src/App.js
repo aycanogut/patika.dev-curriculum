@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import TodoList from "./components/TodoList/TodoList";
 import "./App.css";
 import Form from "./components/Form/Form";
-import TodoHeader from "./components/TodoHeader/TodoHeader"
 
 class App extends Component {
   constructor(props) {
@@ -48,19 +47,9 @@ class App extends Component {
     });
   };
 
-  removeItem = (e) => {
-    const remove = this.state.todos.filter(todo => todo.id != e.target.value);
-    this.setState({todos: remove});
-  };
-
-  
-
   render() {
     return (
       <div className="App">
-
-        <TodoHeader />
-
         <Form
           userInput={this.state.userInput}
           onInputChange={this.onInputChange}
@@ -68,13 +57,12 @@ class App extends Component {
         />
         {this.state.todos.length > 0 && (
           <div className="list">
-            <TodoList todos={this.state.todos} removeItem={this.removeItem} />
+            <TodoList todos={this.state.todos} />
           </div>
         )}
       </div>
     );
   }
 }
-
 
 export default App;
