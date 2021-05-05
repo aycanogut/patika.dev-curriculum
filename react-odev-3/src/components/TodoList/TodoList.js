@@ -8,9 +8,14 @@ function TodoList(props) {
       <ul>
         {props.todos.map((todo) => {
           return (
-            <li className="list-group-item">
+            <div>
+              <li className="list-group-item d-flex justify-content-between align-items-center">
               <TodoItem {...todo} key={todo.id} />
+              <button className='btn btn-danger'>
+              Sil
+            </button>
             </li>
+            </div>
           );
         })}
       </ul>
