@@ -47,7 +47,7 @@ const App = () => {
     return itemCount;
   };
 
-  render() {
+
     return (
       <div className="App">
         <Navbar totalItems={this.state.itemCount} />
@@ -59,7 +59,7 @@ const App = () => {
         />
       </div>
     );
-  }
+  
 }
 
 export default App;
