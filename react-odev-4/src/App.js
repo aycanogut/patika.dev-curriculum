@@ -19,25 +19,25 @@ const App = () => {
 
   function handleIncrement(product) {
     // cart array'inin kopyasını oluştur
-    const cart = [...this.state.cart];
+    const cart = [...items.cart];
     // parametre olarak gelen product'ın cart array'i içerisindeki index'ini bul
-    const index = cart.indexOf(product);
+    const index = items.cart.indexOf(product);
     // kopyalanan cart array'ine bu ürünü ekle ve value property'sini 1 artır
-    cart[index] = { ...cart[index] };
+    cart[index] = { ...items.cart[index] };
     cart[index].value++;
     // getItemCount fonksiyonunu kullanarak sepetteki ürün sayısını bul
-    const itemCount = this.getItemCount(cart);
+    const itemCount = getItemCount(cart);
     // state'i güncelle
-    this.setState({ cart, itemCount });
+    setItems({ cart, itemCount });
   };
 
   function handleDecrement(product)  {
-    const cart = [...this.state.cart];
-    const index = cart.indexOf(product);
-    cart[index] = { ...cart[index] };
+    const cart = [...items.cart];
+    const index = items.cart.indexOf(product);
+    cart[index] = { ...items.cart[index] };
     cart[index].value--;
-    const itemCount = this.getItemCount(cart);
-    this.setState({ cart, itemCount });
+    const itemCount = getItemCount(cart);
+    setItems({ cart, itemCount });
   };
 
   function getItemCount(cart) {
@@ -47,19 +47,17 @@ const App = () => {
     return itemCount;
   };
 
-
     return (
       <div className="App">
-        <Navbar totalItems={this.state.itemCount} />
+        <Navbar totalItems={items.itemCount} />
         <ProductsGrid
           products={products}
-          cart={this.state.cart}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
+          cart={items.cart}
+          onIncrement={handleIncrement}
+          onDecrement={handleDecrement}
         />
       </div>
     );
-  
 }
 
 export default App;
