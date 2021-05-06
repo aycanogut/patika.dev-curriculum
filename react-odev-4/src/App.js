@@ -5,20 +5,19 @@ import { products } from "./constants";
 import ProductsGrid from "./components/ProductsGrid";
 
 const App = () => {
-    const [items, setItems] = useState({
-      cart: [
-        { id: 0, value: 0 },
-        { id: 1, value: 0 },
-        { id: 2, value: 0 },
-        { id: 3, value: 0 },
-        { id: 4, value: 0 },
-        { id: 5, value: 0 },
-      ],
-      itemCount: 0,
+   const [items, setItems] = useState({
+    cart: [
+      { id: 0, value: 0 },
+      { id: 1, value: 0 },
+      { id: 2, value: 0 },
+      { id: 3, value: 0 },
+      { id: 4, value: 0 },
+      { id: 5, value: 0 },
+    ],
+    itemCount: 0,
   });
-    
 
-  handleIncrement = (product) => {
+  function handleIncrement(product) {
     // cart array'inin kopyasını oluştur
     const cart = [...this.state.cart];
     // parametre olarak gelen product'ın cart array'i içerisindeki index'ini bul
@@ -32,7 +31,7 @@ const App = () => {
     this.setState({ cart, itemCount });
   };
 
-  handleDecrement = (product) => {
+  function handleDecrement(product)  {
     const cart = [...this.state.cart];
     const index = cart.indexOf(product);
     cart[index] = { ...cart[index] };
@@ -41,7 +40,7 @@ const App = () => {
     this.setState({ cart, itemCount });
   };
 
-  getItemCount = (cart) => {
+  function getItemCount(cart) {
     // Sepetteki toplam ürün sayısını bul
     let itemCount = cart.reduce((total, product) => total + product.value, 0);
 
