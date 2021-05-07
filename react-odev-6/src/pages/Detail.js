@@ -9,8 +9,9 @@ import '../styles/Detail.css';
 const Detail = () => {
   const { showDetail, selectedMovie } = useContext(MovieContext);
   const { id } = useParams()
+  
   useEffect(() => {
-    showDetail('tt1201607'); // useParams ile alınan film id'sini kullanınız. 
+    showDetail(id); // useParams ile alınan film id'sini kullanınız. 
   }, []);
 
   return (
