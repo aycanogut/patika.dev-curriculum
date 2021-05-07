@@ -17,8 +17,8 @@ const Hamburger = ({ children }) => {
     <HamburgerContext.Provider
       value={{
         selectedIngredients,
-        getCalculatedTotalPrice,
-        setSelectedIngredients
+        setSelectedIngredients,
+        getCalculatedTotalPrice
       }}
     >
       {children}
