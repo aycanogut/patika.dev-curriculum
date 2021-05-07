@@ -7,8 +7,9 @@ import HamburgerContextProvider from "./context/HamburgerContext";
 
 ReactDOM.render(
   <React.StrictMode>
-      {/* Uygulamayı context provider ile sarmalayınız */}
-      <App />
+      <HamburgerContextProvider>
+        <App />
+      </HamburgerContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
