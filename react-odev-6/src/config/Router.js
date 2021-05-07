@@ -18,11 +18,10 @@ export const routes = [
     isHeaderElement: false,
   },
   {
-    path: '/favorites',
-    exact: true,
+    path: '/favorite',
+    exact: false,
     component: <Favorite />,
-    title: 'Favorites',
-    isHeaderElement: false,
-  }
+    title: 'Favoritel',
+    isHeaderElement: true,
+  },
 ];
-
