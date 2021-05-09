@@ -1,0 +1,1 @@
+All the tasks and assignments for Patika.dev Front End Web Development Challenge #1. 
