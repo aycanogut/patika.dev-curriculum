@@ -1,5 +1,5 @@
 function Header() {
-  return <header> Imma header </header>;
+  return <header> Imma header </header>
 }
 
 export default Header;
