@@ -4,6 +4,7 @@ import Header from './components/Header';
 import User from './components/User';
 
 const name = 'Aycan';
+const surname = 'Ogut';
 const age = 30;
 const isLoggedIn = true;
 const friends = [
@@ -29,7 +30,15 @@ function App() {
   return (
     <div className="App"> 
      <Header />
-     <User name='Aycan' surname='Ogut' age={30} isLoggedIn={true} friends={friends}/>
+     <User 
+     name={name}
+     surname={surname}
+     age={age} 
+     isLoggedIn={isLoggedIn}
+     friends={friends} address={{
+       town: 'izmir',
+       zip: 12331,
+     }}/>
     </div>
   );
 }
