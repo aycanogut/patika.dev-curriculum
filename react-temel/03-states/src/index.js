@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Counter from './components/Counter'
+import Counter from './components/Counter';
+import Input from './components/Input';
 import reportWebVitals from './reportWebVitals';
 
 
@@ -10,6 +11,7 @@ ReactDOM.render(
   <React.StrictMode >
     <App />
     <Counter />
+    <Input />
   </React.StrictMode>,
   document.getElementById('root')
 );
