@@ -15,6 +15,7 @@ if (!isLoggedIn) {
   )
 }
 
+//* propTypes and isRequired examples
 User.propTypes = {
   name: PropTypes.string.isRequired,
   surname: PropTypes.string.isRequired,
@@ -30,6 +31,7 @@ User.propTypes = {
   })
 }
 
+//* defaultProps examples
 User.defaultProps = {
   name: 'No name',
   isLoggedIn: false,
