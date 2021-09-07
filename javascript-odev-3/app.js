@@ -72,7 +72,7 @@ const menu = [{
   },
 ];
 
-const foodContainer = document.querySelector('.section-center')
+const foodContainer = document.querySelector('.section-center');
 const buttonWrapper = document.querySelector('.btn-container');
 
 const buttonCategories = menu.reduce(
