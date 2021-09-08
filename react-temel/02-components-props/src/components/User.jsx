@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 
-function User({name, surname, age, isLoggedIn, friends}) {
+function User({name, surname, age, isLoggedIn, friends, address}) {
 
 if (!isLoggedIn) {
   return <h1>Not logged in.</h1>;
@@ -8,7 +8,7 @@ if (!isLoggedIn) {
 
   return  (
     <>
-      <h1>{`Welcome ${name} ${surname}, ${age}`}</h1>
+      <h1>{`Welcome ${name} ${surname}, ${age}, ${address.town} ${address.zip}`}</h1>
       {friends && friends.map((friend) => <div key={friend.id}>{friend.name}</div>)
       }
     </>

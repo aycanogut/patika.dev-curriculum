@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import User from './components/User';
@@ -23,7 +22,11 @@ const friends = [
   { id:3,
     name: 'Rob'
   },
-  ];
+];
+const address = {
+  town: 'Izmir',
+  zip: 4123,
+};
 
 
 function App() {
@@ -35,10 +38,8 @@ function App() {
      surname={surname}
      age={age} 
      isLoggedIn={isLoggedIn}
-     friends={friends} address={{
-       town: 'izmir',
-       zip: 12331,
-     }}/>
+     friends={friends}
+     address={address}/>
     </div>
   );
 }
