@@ -1,0 +1,18 @@
+import React, { useState, useEffect } from "react";
+import List from "./List";
+import Form from "./Form";
+
+function Contacts() {
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {}, [contacts]);
+
+  return (
+    <>
+      <List contacts={contacts} />
+      <Form addContact={setContacts} contacts={contacts} />
+    </>
+  );
+}
+
+export default Contacts;
