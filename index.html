@@ -1,0 +1,75 @@
+<section class="todoapp">
+
+  <!-- !header -->
+  <header class="header">
+    <h1>todos</h1>
+    <form>
+      <input class="new-todo" placeholder="What needs to be done?" autofocus>
+    </form>
+  </header>
+  <!-- !header -->
+
+
+  <!-- This section should be hidden by default and shown when there are todos -->
+  <!--! main -->
+  <section class="main">
+    <input class="toggle-all" type="checkbox">
+    <label for="toggle-all">
+      Mark all as complete
+    </label>
+
+    <ul class="todo-list">
+      <li class="completed">
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Learn JavaScript</label>
+          <button class="destroy"></button>
+        </div>
+      </li>
+      <li>
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Learn React</label>
+          <button class="destroy"></button>
+        </div>
+      </li>
+      <li>
+        <div class="view">
+          <input class="toggle" type="checkbox">
+          <label>Have a life!</label>
+          <button class="destroy"></button>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <!--! main -->
+
+  <!-- ! footer -->
+  <!-- This footer should hidden by default and shown when there are todos -->
+  <footer class="footer">
+
+    <!-- This should be `0 items left` by default -->
+    <span class="todo-count">
+      <strong>2</strong>
+      items left
+    </span>
+
+    <ul class="filters">
+      <li>
+        <a class="selected">All</a>
+      </li>
+      <li>
+        <a>Active</a>
+      </li>
+      <li>
+        <a>Completed</a>
+      </li>
+    </ul>
+
+    <!-- Hidden if no completed items are left ↓ -->
+    <button class="clear-completed">
+      Clear completed
+    </button>
+  </footer>
+  <!-- ! footer -->
+</section>

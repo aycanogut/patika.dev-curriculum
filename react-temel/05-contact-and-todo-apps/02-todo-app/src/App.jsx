@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
+import Todos from "./Components/Todos";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Todos />
+    </div>
+  );
 }
 
 export default App;
