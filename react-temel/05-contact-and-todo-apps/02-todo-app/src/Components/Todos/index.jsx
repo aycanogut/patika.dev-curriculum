@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 function Todos() {
   return (
-    <section className="todoapp">
+    <section class="todoapp">
       <Header />
       <Main />
       <Footer />

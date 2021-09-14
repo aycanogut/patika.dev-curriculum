@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./App.css";
+import React from "react";
 import Todos from "./Components/Todos";
+import "./App.css";
 
 function App() {
   return (

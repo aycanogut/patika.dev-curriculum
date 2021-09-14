@@ -2,16 +2,16 @@ import React from "react";
 
 function Header() {
   return (
-    <Header>
+    <header class="header">
       <h1>todos</h1>
       <form>
         <input
-          className="new-todo"
+          class="new-todo"
           placeholder="What needs to be done?"
           autofocus
         />
       </form>
-    </Header>
+    </header>
   );
 }
 
